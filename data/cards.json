@@ -1,0 +1,243 @@
+                {
+                    "sets": [
+                        {
+                            "name": "Awakenings",
+                            "cards": [
+                                {
+                                    "card": 1,
+                                    "rarity": "Legendary",
+                                    "title": "Captain Phasma- Elite Trooper",
+                                    "unique": true,
+                                    "affiliation": "Villain",
+                                    "color": "Red",
+                                    "type": "Character",
+                                    "health": 11,
+                                    "points": [
+                                        12,
+                                        15
+                                    ],
+                                    "text": "Your non-unique characters have the Guardian keyword.",
+                                    "dice": [
+                                        {
+                                            "side": 1,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Range",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 2,
+                                            "value": 2,
+                                            "modification": 0,
+                                            "type": "Range",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 3,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Focus",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 4,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Discard",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 5,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Resource",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 6,
+                                            "value": 0,
+                                            "modification": 0,
+                                            "type": "Blank",
+                                            "cost": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "card": 2,
+                                    "rarity": "Rare",
+                                    "title": "First Order Stormtrooper",
+                                    "unique": false,
+                                    "affiliation": "Villain",
+                                    "color": "Red",
+                                    "type": "Character",
+                                    "health": 7,
+                                    "points": [
+                                        7
+                                    ],
+                                    "text": "Members of this new generation of stormtroopers are trained from birth and fed a steady diet of First Order propaganda to ensure absolute loyalty.",
+                                    "dice": [
+                                        {
+                                            "side": 1,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Range",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 2,
+                                            "value": 2,
+                                            "modification": 0,
+                                            "type": "Range",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 3,
+                                            "value": 2,
+                                            "modification": 0,
+                                            "type": "Range",
+                                            "cost": 1
+                                        },
+                                        {
+                                            "side": 4,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Resource",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 5,
+                                            "value": 0,
+                                            "modification": 0,
+                                            "type": "Blank",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 6,
+                                            "value": 0,
+                                            "modification": 0,
+                                            "type": "Blank",
+                                            "cost": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "card": 3,
+                                    "rarity": "Rare",
+                                    "title": "General Grievous - Jedi Hunter",
+                                    "unique": true,
+                                    "affiliation": "Villain",
+                                    "color": "Red",
+                                    "type": "Character",
+                                    "health": 10,
+                                    "points": [
+                                        10
+                                    ],
+                                    "text": "Before an opponent's character is defeated, you may move one of their non-ability upgrades to this character.",
+                                    "dice": [
+                                        {
+                                            "side": 1,
+                                            "value": 2,
+                                            "modification": 0,
+                                            "type": "Melee",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 2,
+                                            "value": 2,
+                                            "modification": 0,
+                                            "type": "Melee",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 3,
+                                            "value": 3,
+                                            "modification": 0,
+                                            "type": "Melee",
+                                            "cost": 1
+                                        },
+                                        {
+                                            "side": 4,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Disrupt",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 5,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Resource",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 6,
+                                            "value": 0,
+                                            "modification": 0,
+                                            "type": "Blank",
+                                            "cost": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "card": 4,
+                                    "rarity": "Rare",
+                                    "title": "General Veers- Field Commander",
+                                    "unique": true,
+                                    "affiliation": "Villain",
+                                    "color": "Red",
+                                    "type": "Character",
+                                    "health": 9,
+                                    "points": [
+                                        9
+                                    ],
+                                    "text": "Action- Remove this die to turn one of your support dice to any side.",
+                                    "dice": [
+                                        {
+                                            "side": 1,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Range",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 2,
+                                            "value": 2,
+                                            "modification": 0,
+                                            "type": "Range",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 3,
+                                            "value": 0,
+                                            "modification": 2,
+                                            "type": "Range",
+                                            "cost": 1
+                                        },
+                                        {
+                                            "side": 4,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Shield",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 5,
+                                            "value": 1,
+                                            "modification": 0,
+                                            "type": "Resource",
+                                            "cost": 0
+                                        },
+                                        {
+                                            "side": 6,
+                                            "value": 0,
+                                            "modification": 0,
+                                            "type": "Blank",
+                                            "cost": 0
+                                        }
+                                    ]
+                                }
+                                
+                            ]
+                        }
+                    ]
+                }
