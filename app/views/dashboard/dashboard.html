@@ -1,15 +1,42 @@
 <h1>Ciao io sono {{ctrl.componentName}}</h1>
 
-<p>Nome</p>
+<p>Nome Citta</p>
 <input type="text" ng-model="ctrl.citta.nome">
-<p>Regione</p>
+<p>Nome Regione</p>
 <input type="text" ng-model="ctrl.citta.regione">
+<p> {{ctrl.citta.nome}}</p>
+<p> {{ctrl.citta.regione}}</p>
 
-<button ng-click="aggiungiCitta()">AGGIUNGI CITTA</button>
+<button ng-click="ctrl.aggiungiCitta()">AGGIUNGI CITTA</button>
+<button ng-click="ctrl.saveAll()">SALVA CITTA</button>
 
 <ul ng-repeat="citta in ctrl.elenco">
     <li>
-       <p> {{citta.nome}}</p>
-       <p> {{citta.regione}}</p>
+        <p> {{citta.nome}}</p>
+        <p> {{citta.regione}}</p>
     </li>
 </ul>
+
+<hr>
+
+<form name="myForm" ng-submit="ctrl.inviaForm(utente)" novalidate>
+    <label> nome* </label>
+    <input ng-class="myForm.name.$valid ? 'form-success' : 'form-error'" name="name" type="text" ng-model="ctrl.utente.nome" ng-minlength="5" ng-required="true">
+<!--    <p ng-show="myForm.name.$invalid">Il nome utente è obbligatorio e dev'essere minimo di 1 carattere</p>
+-->    <p ng-show="myForm.name.$error.minlenght">Il nome utente è obbligatorio e dev'essere minimo di 5 carattere</p>
+
+    <label> cognome* </label>
+    <input  type="text" ng-model="ctrl.utente.cognome" ng-required="true">
+
+    <label> eta </label>
+    <input  type="text" ng-model="ctrl.utente.eta">
+
+    <label> Maschio </label>
+    <input  type="radio" ng-model="ctrl.utente.sesso" value="maschio">
+
+    <label> Femmina </label>
+    <input  type="radio" ng-model="ctrl.utente.sesso" value="femmina">
+
+    <!--    <button ng-disabled="myForm.$invalid" type="submit">INVIA</button>-->
+    <button type="submit">INVIA</button>
+</form>

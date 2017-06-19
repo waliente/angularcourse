@@ -1,20 +1,17 @@
 angular.module('cittaServices', [])
 
-    .service('elencoCitta', function () {
-        this.elenco = [
-            { nome: "Roma", regione: "Lazio" },
-            { nome: "Latina", regione: "Lazio" },
-            { nome: "Milano", regione: "Lombardia" },
-            { nome: "Napoli", regione: "Campania" },
-            { nome: "Como", regione: "Lombardia" },
-            { nome: "Palermo", regione: "Sicilia" },
-            { nome: "Caserta", regione: "Campania" },
-            { nome: "Avellino", regione: "Campania" },
-            { nome: "Trapani", regione: "Sicilia" },
-            { nome: "Agrigento", regione: "Sicilia" }
-        ];
+    .service('elencoCitta', function ($http) {
+       return {
+           getAll: function(){
+               return $http.get("./data/elencoCitta.json")
+           },
+           saveAll: function(citta){
+               return $http.post("./data/elencoCitta.json", citta) 
+           }
+       } 
 
         this.aggiungi = function (citta) {
-            this.elenco.push(citta);
+            console.log("cittaServices" + citta);
+            this.elenco.unshift(citta);
         };
     });
