@@ -24,7 +24,7 @@ angular.module('app.dashboard', [])
     /*Creo un oggetto citta - da popolare con ng model */
     vm.citta = {};
     /*Creo un oggetto utente */
-    vm.utente ={}
+    vm.utente = {};
 
 
     //AGGIUNGI CITTA
@@ -34,7 +34,7 @@ angular.module('app.dashboard', [])
         nome: vm.citta.nome,
         regione: vm.citta.regione
       })
-    }
+    };
 
 
     //SALVA CITTA
@@ -49,7 +49,7 @@ angular.module('app.dashboard', [])
           console.log(vm.citta)
           alert("Si è verificato un errore!");
         })
-    }
+    };
 
     //INVIA DATI UTENTE
     vm.inviaForm = function(){
