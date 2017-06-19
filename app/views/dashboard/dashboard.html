@@ -1,5 +1,13 @@
 <h1>Ciao io sono {{ctrl.componentName}}</h1>
-<ul ng-repeat="citta in elencoCitta" >
+
+<p>Nome</p>
+<input type="text" ng-model="ctrl.citta.nome">
+<p>Regione</p>
+<input type="text" ng-model="ctrl.citta.regione">
+
+<button ng-click="aggiungiCitta()">AGGIUNGI CITTA</button>
+
+<ul ng-repeat="citta in ctrl.elenco">
     <li>
        <p> {{citta.nome}}</p>
        <p> {{citta.regione}}</p>
