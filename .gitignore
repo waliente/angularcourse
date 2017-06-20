@@ -49,4 +49,4 @@ Temporary Items
 #custom folders
 node_modules/
 app/bower_components
-.idea
+.idea/

@@ -11,32 +11,91 @@
 <button ng-click="ctrl.salvaCitta()">SALVA CITTA</button>
 
 <ul ng-repeat="citta in ctrl.elenco">
-    <li>
-        <p> {{citta.nome}}</p>
-        <p> {{citta.regione}}</p>
-    </li>
+  <li>
+    <p> {{citta.nome}}</p>
+    <p> {{citta.regione}}</p>
+  </li>
 </ul>
 
 <hr>
 
-<form name="myForm" ng-submit="ctrl.inviaForm(utente)" novalidate>
-    <label> nome* </label>
-    <input ng-class="myForm.name.$valid ? 'form-success' : 'form-error'" name="name" type="text" ng-model="ctrl.utente.nome" ng-minlength="5" ng-required="true">
-<!--    <p ng-show="myForm.name.$invalid">Il nome utente è obbligatorio e dev'essere minimo di 1 carattere</p>
--->    <p ng-show="myForm.name.$error.minlenght">Il nome utente è obbligatorio e dev'essere minimo di 5 carattere</p>
+<!--<form name="myForm" ng-submit="ctrl.inviaForm(utente)" novalidate>-->
+  <!--<label> nome* </label>-->
+  <!--<input ng-class="myForm.name.$valid ? 'form-success' : 'form-error'" name="name" type="text" ng-model="ctrl.utente.nome" ng-minlength="5" ng-required="true">-->
+  <!--&lt;!&ndash;    <p ng-show="myForm.name.$invalid">Il nome utente è obbligatorio e dev'essere minimo di 1 carattere</p>-->
+  <!--&ndash;&gt; <p ng-show="myForm.name.$error.minlenght">Il nome utente è obbligatorio e dev'essere minimo di 5 carattere</p>-->
 
-    <label> cognome* </label>
-    <input  type="text" ng-model="ctrl.utente.cognome" ng-required="true">
+  <!--<label> cognome* </label>-->
+  <!--<input type="text" ng-model="ctrl.utente.cognome" ng-required="true">-->
 
-    <label> eta </label>
-    <input  type="text" ng-model="ctrl.utente.eta">
+  <!--<label> eta </label>-->
+  <!--<input type="text" ng-model="ctrl.utente.eta">-->
 
-    <label> Maschio </label>
-    <input  type="radio" ng-model="ctrl.utente.sesso" value="maschio">
+  <!--<label> Maschio </label>-->
+  <!--<input type="radio" ng-model="ctrl.utente.sesso" value="maschio">-->
 
-    <label> Femmina </label>
-    <input  type="radio" ng-model="ctrl.utente.sesso" value="femmina">
+  <!--<label> Femmina </label>-->
+  <!--<input type="radio" ng-model="ctrl.utente.sesso" value="femmina">-->
 
-    <!--    <button ng-disabled="myForm.$invalid" type="submit">INVIA</button>-->
-    <button type="submit">INVIA</button>
-</form>
+  <!--&lt;!&ndash;    <button ng-disabled="myForm.$invalid" type="submit">INVIA</button>&ndash;&gt;-->
+  <!--<button type="submit">INVIA</button>-->
+<!--</form>-->
+
+
+<!-- added by Marco -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <form name="utenteForm" ng-submit="ctrl.inviaForm(utente)" novalidate>
+
+            <!-- NAME -->
+            <div class="form-group" ng-class="{ 'has-error' : utenteForm.name.$invalid && !utenteForm.name.$pristine, 'has-danger' : utenteForm.name.$dirty ,'has-success' : utenteForm.name.$valid }">
+              <label>Name</label>
+              <input type="text"
+                     name="name"
+                     class="form-control"
+                     ng-model="ctrl.utente.nome"
+                     ng-model-options="{updateOn: 'blur'}"
+                     required
+                     ng-pattern ="/^[a-zA-Z\s]*$/"
+                     ng-minlength="5">
+              <p ng-if="utenteForm.name.$invalid && utenteForm.name.$error.minlength && !utenteForm.name.$pristine" class="help-block"><small>Nome utente non può contenere numeri e dev'essere più di 5
+                caratteri</small></p>
+              <p ng-if="utenteForm.name.$error.required" class="help-block"><small>Nome utente è obbligatorio</small></p>
+            </div>
+
+            <!-- USERNAME -->
+            <div class="form-group"
+                 ng-class="{ 'has-error' : utenteForm.username.$invalid && !utenteForm.username.$pristine,
+                             'has-success': utenteForm.username.$valid && !utenteForm.username.$pristine && ctrl.utente.username !== '' }">
+              <label>Username</label>
+              <input type="text"
+                     name="username"
+                     class="form-control"
+                     ng-model="ctrl.utente.username"
+                     ng-minlength="3" >
+              <p ng-show="utenteForm.username.$error.minlength" class="help-block">Username is too short.</p>
+              <p ng-show="utenteForm.username.$valid && !utenteForm.username.$pristine && utenteForm.username.$dirty && ctrl.utente.username !== ''" class="help-block" style="color:green"><span
+                  class="glyphicon glyphicon-ok"></span> OK
+              </p>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-group" ng-class="{
+              'has-error' : utenteForm.email.$invalid && !utenteForm.email.$pristine,
+              'has-success' : utenteForm.email.$valid && !utenteForm.email.$pristine && ctrl.utente.email !== ''}">
+              <label>Email</label>
+              <input type="email" name="email" class="form-control" ng-model="ctrl.utente.email">
+              <p ng-show="utenteForm.email.$invalid && !utenteForm.email.$pristine" class="help-block">Enter a valid email.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" ng-disabled="utenteForm.$invalid">Submit</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

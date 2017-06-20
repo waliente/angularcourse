@@ -8,7 +8,7 @@ angular.module('app.dashboard', [])
 
     vm.componentName = "Dashboard";
     elencoCitta.getAll()
-      /*Successo (success)*/
+    /*Successo (success)*/
       .success(function (data) {
         console.log(data);
         vm.elenco = data
@@ -29,7 +29,7 @@ angular.module('app.dashboard', [])
 
     //AGGIUNGI CITTA
     vm.aggiungiCitta = function () {
-      console.log(vm.citta)
+      console.log(vm.citta);
       elencoCitta.aggiungi({
         nome: vm.citta.nome,
         regione: vm.citta.regione
@@ -39,24 +39,24 @@ angular.module('app.dashboard', [])
 
     //SALVA CITTA
     vm.salvaCitta = function () {
-      console.log(vm.citta)
+      console.log(vm.citta);
       elencoCitta.saveAll(vm.citta)
         .success(function () {
-          console.log(vm.citta)
+          console.log(vm.citta);
           alert("Città aggiunta correttamente!");
         })
         .error(function () {
-          console.log(vm.citta)
+          console.log(vm.citta);
           alert("Si è verificato un errore!");
         })
     };
 
     //INVIA DATI UTENTE
-    vm.inviaForm = function(){
-      console.log(vm.utente)
-      if ($scope.myForm.$valid){
+    vm.inviaForm = function () {
+      console.log(vm.utente);
+      if ($scope.utenteForm.$valid) {
         alert("Dati inviati Ok")
-      } else{
+      } else {
         alert("errore")
       }
     }
