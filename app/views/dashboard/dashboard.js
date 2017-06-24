@@ -6,6 +6,8 @@ angular.module('app.dashboard', [])
 
     var vm = this;
 
+    $scope.ciao = "Salve a tutti";
+
     vm.componentName = "Dashboard";
     elencoCitta.getAll()
     /*Successo (success)*/
@@ -30,7 +32,7 @@ angular.module('app.dashboard', [])
     //AGGIUNGI CITTA
     vm.aggiungiCitta = function () {
       console.log(vm.citta);
-      elencoCitta.aggiungi({
+      vm.elenco.unshift({
         nome: vm.citta.nome,
         regione: vm.citta.regione
       })

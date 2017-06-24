@@ -9,9 +9,4 @@ angular.module('cittaServices', [])
                return $http.post("./data/elencoCitta.json", citta) 
            }
        } 
-
-        this.aggiungi = function (citta) {
-            console.log("cittaServices" + citta);
-            this.elenco.unshift(citta);
-        };
     });
