@@ -7,16 +7,7 @@ angular.module('app.dashboard', [])
     var vm = this;
 
     $scope.ciao = "Salve a tutti";
-    $scope.elencoCitta = [
-        {
-            "nome": "Roma",
-            "regione": "Lazio"
-        },
-        {
-            "nome": "Latina",
-            "regione": "Lazio"
-        }
-    ];
+   
     vm.componentName = "Dashboard";
     elencoCitta.getAll()
     /*Successo (success)*/

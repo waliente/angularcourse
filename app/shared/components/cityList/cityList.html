@@ -1,8 +1,12 @@
-<ul ng-repeat="citta in elencoCitta">
+<ul ng-repeat="citta in cityListCtrl.elencoCitta">
   <li>
     <p> {{citta.nome}}</p>
     <p> {{citta.regione}}</p>
   </li>
 </ul>
-{{cityListCtrl.elencoCitta}}
-{{ciao}}
+
+<p>{{cityListCtrl.ciao}}</p>
+<!--<p>
+  {{cityListCtrl.elencoCitta}}
+</p>
+-->
