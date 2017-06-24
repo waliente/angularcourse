@@ -7,7 +7,10 @@ angular.module('myApp', [
   'cittaServices',
   
   /* my components */
-  'app.dashboard'
+  'app.dashboard',
+  'app.addCityComponent',
+  'app.cityListComponent',
+
 ])
 
   .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function ($locationProvider, $stateProvider, $urlRouterProvider) {

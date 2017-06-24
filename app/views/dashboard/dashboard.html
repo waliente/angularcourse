@@ -1,22 +1,10 @@
 <h1>Ciao io sono {{ctrl.componentName}}</h1>
 
-<p>Nome Citta</p>
-<input type="text" ng-model="ctrl.citta.nome">
-<p>Nome Regione</p>
-<input type="text" ng-model="ctrl.citta.regione">
-<p> {{ctrl.citta.nome}}</p>
-<p> {{ctrl.citta.regione}}</p>
-
-<button ng-click="ctrl.aggiungiCitta()">AGGIUNGI CITTA</button>
-<button ng-click="ctrl.salvaCitta()">SALVA CITTA</button>
-
-<ul ng-repeat="citta in ctrl.elenco">
-  <li>
-    <p> {{citta.nome}}</p>
-    <p> {{citta.regione}}</p>
-  </li>
-</ul>
-
+<!--Inietta direttiva custom-->
+<add-city></add-city>
+<hr>
+<!--Inietta componente custom-->
+<city-list elenco-citta="ctrl.elenco" saluto="ciao"></city-list>
 <hr>
 
 <!--<form name="myForm" ng-submit="ctrl.inviaForm(utente)" novalidate>-->
