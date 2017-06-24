@@ -3,8 +3,13 @@ angular.module("app.cityListComponent", [])
       restrict: "E",
       templateUrl: "./shared/components/cityList/cityList.html",
       bindings: {
+<<<<<<< HEAD
           elencoCitta: "=cityList",
           ciao: "=saluto"
+=======
+          elencoCitta: "=",
+          saluto: "<"
+>>>>>>> ce608e91fa050c3d2537300e4cae7dfd300e6856
       },
       controller: "cityListCtrl",
       controllerAs: "cityListCtrl"
