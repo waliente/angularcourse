@@ -15,7 +15,7 @@ angular.module('app.dashboard', [])
         {
             "nome": "Latina",
             "regione": "Lazio"
-        },
+        }
     ];
     vm.componentName = "Dashboard";
     elencoCitta.getAll()
