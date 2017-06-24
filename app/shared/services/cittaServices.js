@@ -7,11 +7,11 @@ angular.module('cittaServices', [])
            },
            saveAll: function(citta){
                return $http.post("./data/elencoCitta.json", citta) 
+           },
+           aggiungi: function (citta) {
+             console.log("cittaServices" + citta);
+             this.elenco.unshift(citta);
            }
-       } 
+       }
 
-        this.aggiungi = function (citta) {
-            console.log("cittaServices" + citta);
-            this.elenco.unshift(citta);
-        };
     });
