@@ -3,12 +3,14 @@ angular.module("app.cityListComponent", [])
       restrict: "E",
       templateUrl: "./shared/components/cityList/cityList.html",
       bindings: {
-          elencoCitta: "=",
-          saluto: "="
+          elencoCitta: "=cityList",
+          ciao: "=saluto"
       },
-      controller: "cityListCtrl"
+      controller: "cityListCtrl",
+      controllerAs: "cityListCtrl"
   })
      .controller('cityListCtrl', ['$scope', 'elencoCitta', function ($scope, elencoCitta) {
-         console.log($scope.ciao)
+         console.log(this.ciao);
+         console.log($scope.elencoCitta)
      }])
   ; 

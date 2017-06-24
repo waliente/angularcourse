@@ -7,7 +7,16 @@ angular.module('app.dashboard', [])
     var vm = this;
 
     $scope.ciao = "Salve a tutti";
-
+    $scope.elencoCitta = [
+        {
+            "nome": "Roma",
+            "regione": "Lazio"
+        },
+        {
+            "nome": "Latina",
+            "regione": "Lazio"
+        },
+    ];
     vm.componentName = "Dashboard";
     elencoCitta.getAll()
     /*Successo (success)*/
@@ -22,7 +31,7 @@ angular.module('app.dashboard', [])
 
 
     /*Imposto la variabile elenco alla risposta del servizio*/
-    vm.elenco = elencoCitta.elenco;
+/*    vm.elenco = elencoCitta.elenco;*/
     /*Creo un oggetto citta - da popolare con ng model */
     vm.citta = {};
     /*Creo un oggetto utente */

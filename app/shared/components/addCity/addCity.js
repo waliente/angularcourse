@@ -6,5 +6,8 @@ angular.module("app.addCityComponent", [])
 /*      link: function(scope, elements, attributes){
           
       }*/
+      controller: function(){
+          
+      }
     }; 
   }); 
