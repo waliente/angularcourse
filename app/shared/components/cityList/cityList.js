@@ -4,7 +4,7 @@ angular.module("app.cityListComponent", [])
       templateUrl: "./shared/components/cityList/cityList.html",
       bindings: {
           elencoCitta: "=",
-          saluto: "="
+          saluto: "<"
       },
       controller: "cityListCtrl"
   })
