@@ -1,4 +1,4 @@
-<ul ng-repeat="citta in cityListCtrl.elencoCitta">
+<ul ng-repeat="citta in cityListCtrl.elencoCitta track by $index">
   <li>
     <p> {{citta.nome}}</p>
     <p> {{citta.regione}}</p>

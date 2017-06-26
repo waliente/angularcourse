@@ -4,7 +4,7 @@ angular.module("app.cityListComponent", [])
       templateUrl: "./shared/components/cityList/cityList.html",
       bindings: {
           /* Accetta gli scope */
-          elencoCitta: "=",
+          elencoCitta: "<",
          /* Accetta solo in ingresso
             elencoCitta: "<",
           */
@@ -17,14 +17,11 @@ angular.module("app.cityListComponent", [])
          /* Ignora errori dovuti al fatto che non ci sia lo scope
             elencoCitta: "=?",
          */
-          ciao: "=saluto"
       },
       controller: "cityListCtrl",
       controllerAs: "cityListCtrl"
   })
      .controller('cityListCtrl', ['$scope', 'elencoCitta', function ($scope, elencoCitta) {
          var vm = this;
-         console.log(vm.ciao);
-         console.log(vm.elencoCitta)
      }])
   ; 

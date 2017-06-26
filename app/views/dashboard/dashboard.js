@@ -13,7 +13,7 @@ angular.module('app.dashboard', [])
     /*Successo (success)*/
       .success(function (data) {
         console.log(data);
-        vm.elenco = data
+        vm.elenco = data;
       })
       /*Errore (error)*/
       .error(function () {
@@ -27,31 +27,6 @@ angular.module('app.dashboard', [])
     vm.citta = {};
     /*Creo un oggetto utente */
     vm.utente = {};
-
-
-    //AGGIUNGI CITTA
-    vm.aggiungiCitta = function () {
-      console.log(vm.citta);
-      vm.elenco.unshift({
-        nome: vm.citta.nome,
-        regione: vm.citta.regione
-      })
-    };
-
-
-    //SALVA CITTA
-    vm.salvaCitta = function () {
-      console.log(vm.citta);
-      elencoCitta.saveAll(vm.citta)
-        .success(function () {
-          console.log(vm.citta);
-          alert("Città aggiunta correttamente!");
-        })
-        .error(function () {
-          console.log(vm.citta);
-          alert("Si è verificato un errore!");
-        })
-    };
 
     //INVIA DATI UTENTE
     vm.inviaForm = function () {
