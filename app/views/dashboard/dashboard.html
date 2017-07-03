@@ -1,7 +1,11 @@
+<ul class="list-inline">
+  <li><a ui-sref="dashboard" ui-sref-active="active">Dashboard</a></li>
+  <li><a ui-sref="cities" ui-sref-active="active">Elenco Citta</a></li>
+</ul>
 <h1>Ciao io sono {{ctrl.componentName}}</h1>
 
 <!--Inietta direttiva custom-->
-<add-city elenco-citta="ctrl.elenco"></add-city>
+<add-city elenco-citta="ctrl.elenco" svuota-citta="ctrl.svuotaCitta()"></add-city>
 <hr>
 <!--Inietta componente custom-->
 <city-list elenco-citta="ctrl.elenco"></city-list>

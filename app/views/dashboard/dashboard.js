@@ -22,7 +22,7 @@ angular.module('app.dashboard', [])
 
 
     /*Imposto la variabile elenco alla risposta del servizio*/
-/*    vm.elenco = elencoCitta.elenco;*/
+    /*    vm.elenco = elencoCitta.elenco;*/
     /*Creo un oggetto citta - da popolare con ng model */
     vm.citta = {};
     /*Creo un oggetto utente */
@@ -36,6 +36,11 @@ angular.module('app.dashboard', [])
       } else {
         alert("errore")
       }
+    }
+
+    //SVUOTA CITTA
+    vm.svuotaCitta = function () {
+      alert("ciao adesso svuoto");
     }
 
   }]);

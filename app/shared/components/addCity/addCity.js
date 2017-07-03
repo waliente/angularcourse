@@ -4,7 +4,8 @@ angular.module("app.addCityComponent", [])
       restrict: "E",
       templateUrl: "./shared/components/addCity/addCity.html",
       scope: {
-        elencoCitta: "="
+        elencoCitta: "=",
+        svuotaCitta: "&",
       },
       controllerAs: 'addCityCtrl',
       controller: function($scope, elencoCitta){
@@ -29,6 +30,8 @@ angular.module("app.addCityComponent", [])
               alert("Si è verificato un errore!");
             });
         };
+
+        
 
       }
     }; 
