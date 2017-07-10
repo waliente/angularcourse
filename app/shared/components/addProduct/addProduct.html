@@ -1,0 +1,15 @@
+<p>Scegli immagine</p>
+<input  type="file" name="pic" accept="img/*" ng-model="addProductCtrl.prodotto.image">
+<p>Nome Prodotto</p>
+<input type="text" ng-model="addProductCtrl.prodotto.nome">
+<p>Prezzo</p>
+<input type="number" ng-model="addProductCtrl.prodotto.prezzo">
+<hr>
+<h2>Stai aggiungendo:</h2>
+<p> Immagine: {{addProductCtrl.prodotto.image}}</p>
+<h2> Nome: {{addProductCtrl.prodotto.nome}}</h2>
+<h4> Prezzo: {{addProductCtrl.prodotto.prezzo}}€</h4>
+
+<button ng-click="addProductCtrl.aggiungiProdottto(addProductCtrl.prodotto)">AGGIUNGI PRODOTTO</button>
+<button ng-click="addProductCtrl.salvaProdotto()">SALVA PRODOTTO</button>
+<button ng-click="svuotaProdotto()">SVUOTA PRODOTTI</button>

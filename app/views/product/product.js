@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('app.cities', [])
+angular.module('app.products', [])
 
-  .controller('citiesCtrl', ['$scope','$stateParams', '$state', 'elencoCitta', function ($scope, $stateParams, $state, elencoCitta) {
+  .controller('prodCtrl', ['$scope','$stateParams', '$state', 'elencoProdotti', function ($scope, $stateParams, $state, elencoProdotti) {
 
     var vm = this; 
 
-    elencoCitta.getAll()
+    elencoProdotti.getAll()
     /*Successo (success)*/
       .success(function (data) {
         console.log(data);
@@ -17,9 +17,9 @@ angular.module('app.cities', [])
         alert("Si è verificato un errore!");
       });
 
-    console.log($stateParams.cityName);
+    console.log($stateParams.productName);
 
-    vm.nomeCitta = $stateParams.cityName;
+    vm.nomeProdotto = $stateParams.productName;
 
     vm.goTo = function(url){
         $state.go(url)

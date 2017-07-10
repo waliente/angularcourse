@@ -40,8 +40,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cityList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/shared/components/cityList/cityList.html">
+      <file leaf-file-name="productList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/shared/components/productList/productList.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
@@ -70,8 +70,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addCity.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/shared/components/addCity/addCity.html">
+      <file leaf-file-name="addProduct.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/shared/components/addProduct/addProduct.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
@@ -80,8 +80,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addCity.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/shared/components/addCity/addCity.js">
+      <file leaf-file-name="addProduct.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/shared/components/addProduct/addProduct.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
               <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
@@ -90,8 +90,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cityList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/shared/components/cityList/cityList.js">
+      <file leaf-file-name="productList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/shared/components/productList/productList.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
               <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
@@ -127,19 +127,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shared/services/cittaServices.js" />
+        <option value="$PROJECT_DIR$/shared/services/prodottiServices.js" />
         <option value="$PROJECT_DIR$/app/app.js" />
         <option value="$PROJECT_DIR$/app/assets/css/main.css" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/shared/services/cittaServices.js" />
+        <option value="$PROJECT_DIR$/app/shared/services/prodottiServices.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/shared/components/addCity/addCity.html" />
-        <option value="$PROJECT_DIR$/app/shared/components/cityList/cityList.html" />
+        <option value="$PROJECT_DIR$/app/shared/components/addProduct/addProduct.html" />
+        <option value="$PROJECT_DIR$/app/shared/components/productList/productList.html" />
         <option value="$PROJECT_DIR$/app/views/dashboard/dashboard.js" />
         <option value="$PROJECT_DIR$/app/views/dashboard/dashboard.html" />
-        <option value="$PROJECT_DIR$/app/shared/components/cityList/cityList.js" />
-        <option value="$PROJECT_DIR$/app/shared/components/addCity/addCity.js" />
+        <option value="$PROJECT_DIR$/app/shared/components/productList/productList.js" />
+        <option value="$PROJECT_DIR$/app/shared/components/addProduct/addProduct.js" />
       </list>
     </option>
   </component>
@@ -263,7 +263,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cityList" />
+              <option name="myItemId" value="productList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,7 +289,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="addCity" />
+              <option name="myItemId" value="addProduct" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,7 +516,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/services/cittaServices.js">
+    <entry file="file://$PROJECT_DIR$/app/shared/services/prodottiServices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
@@ -565,7 +565,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/services/cittaServices.js">
+    <entry file="file://$PROJECT_DIR$/app/shared/services/prodottiServices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
@@ -622,7 +622,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/services/cittaServices.js">
+    <entry file="file://$PROJECT_DIR$/app/shared/services/prodottiServices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
@@ -810,7 +810,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/services/cittaServices.js">
+    <entry file="file://$PROJECT_DIR$/app/shared/services/prodottiServices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
@@ -836,7 +836,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/components/cityList/cityList.html">
+    <entry file="file://$PROJECT_DIR$/app/shared/components/productList/productList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
@@ -844,7 +844,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/components/cityList/cityList.js">
+    <entry file="file://$PROJECT_DIR$/app/shared/components/productList/productList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
@@ -852,7 +852,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/components/addCity/addCity.html">
+    <entry file="file://$PROJECT_DIR$/app/shared/components/addProduct/addProduct.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
@@ -860,7 +860,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/components/addCity/addCity.js">
+    <entry file="file://$PROJECT_DIR$/app/shared/components/addProduct/addProduct.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />

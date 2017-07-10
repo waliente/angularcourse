@@ -1,94 +1,34 @@
-<ul class="list-inline">
-  <li><a ui-sref="dashboard" ui-sref-active="active">Dashboard</a></li>
-  <li><a ui-sref="cities" ui-sref-active="active">Elenco Citta</a></li>
-</ul>
-<h1>Ciao io sono {{ctrl.componentName}}</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AngularCourse</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref="dashboard" ui-sref-active="active">Dashboard</a></li>
+        <li><a ui-sref="product" ui-sref-active="active">Prodotti</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<ol class="breadcrumb">
+  <li>{{ctrl.componentName}}</li>
+</ol>
 
 <!--Inietta direttiva custom-->
-<add-city elenco-citta="ctrl.elenco" svuota-citta="ctrl.svuotaCitta()"></add-city>
+<add-product elenco-prodotti="ctrl.elenco" svuota-prodotto="ctrl.svuotaProdotto()"></add-product>
 <hr>
 <!--Inietta componente custom-->
-<city-list elenco-citta="ctrl.elenco"></city-list>
-
-<hr>
-
-<!--<form name="myForm" ng-submit="ctrl.inviaForm(utente)" novalidate>-->
-  <!--<label> nome* </label>-->
-  <!--<input ng-class="myForm.name.$valid ? 'form-success' : 'form-error'" name="name" type="text" ng-model="ctrl.utente.nome" ng-minlength="5" ng-required="true">-->
-  <!--&lt;!&ndash;    <p ng-show="myForm.name.$invalid">Il nome utente è obbligatorio e dev'essere minimo di 1 carattere</p>-->
-  <!--&ndash;&gt; <p ng-show="myForm.name.$error.minlenght">Il nome utente è obbligatorio e dev'essere minimo di 5 carattere</p>-->
-
-  <!--<label> cognome* </label>-->
-  <!--<input type="text" ng-model="ctrl.utente.cognome" ng-required="true">-->
-
-  <!--<label> eta </label>-->
-  <!--<input type="text" ng-model="ctrl.utente.eta">-->
-
-  <!--<label> Maschio </label>-->
-  <!--<input type="radio" ng-model="ctrl.utente.sesso" value="maschio">-->
-
-  <!--<label> Femmina </label>-->
-  <!--<input type="radio" ng-model="ctrl.utente.sesso" value="femmina">-->
-
-  <!--&lt;!&ndash;    <button ng-disabled="myForm.$invalid" type="submit">INVIA</button>&ndash;&gt;-->
-  <!--<button type="submit">INVIA</button>-->
-<!--</form>-->
-
-
-<!-- added by Marco -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-6">
-          <form name="utenteForm" ng-submit="ctrl.inviaForm(utente)" novalidate>
-
-            <!-- NAME -->
-            <div class="form-group" ng-class="{ 'has-error' : utenteForm.name.$invalid && !utenteForm.name.$pristine, 'has-danger' : utenteForm.name.$dirty ,'has-success' : utenteForm.name.$valid }">
-              <label>Name</label>
-              <input type="text"
-                     name="name"
-                     class="form-control"
-                     ng-model="ctrl.utente.nome"
-                     ng-model-options="{updateOn: 'blur'}"
-                     required
-                     ng-pattern ="/^[a-zA-Z\s]*$/"
-                     ng-minlength="5">
-              <p ng-if="utenteForm.name.$invalid && utenteForm.name.$error.minlength && !utenteForm.name.$pristine" class="help-block"><small>Nome utente non può contenere numeri e dev'essere più di 5
-                caratteri</small></p>
-              <p ng-if="utenteForm.name.$error.required" class="help-block"><small>Nome utente è obbligatorio</small></p>
-            </div>
-
-            <!-- USERNAME -->
-            <div class="form-group"
-                 ng-class="{ 'has-error' : utenteForm.username.$invalid && !utenteForm.username.$pristine,
-                             'has-success': utenteForm.username.$valid && !utenteForm.username.$pristine && ctrl.utente.username !== '' }">
-              <label>Username</label>
-              <input type="text"
-                     name="username"
-                     class="form-control"
-                     ng-model="ctrl.utente.username"
-                     ng-minlength="3" >
-              <p ng-show="utenteForm.username.$error.minlength" class="help-block">Username is too short.</p>
-              <p ng-show="utenteForm.username.$valid && !utenteForm.username.$pristine && utenteForm.username.$dirty && ctrl.utente.username !== ''" class="help-block" style="color:green"><span
-                  class="glyphicon glyphicon-ok"></span> OK
-              </p>
-            </div>
-
-            <!-- EMAIL -->
-            <div class="form-group" ng-class="{
-              'has-error' : utenteForm.email.$invalid && !utenteForm.email.$pristine,
-              'has-success' : utenteForm.email.$valid && !utenteForm.email.$pristine && ctrl.utente.email !== ''}">
-              <label>Email</label>
-              <input type="email" name="email" class="form-control" ng-model="ctrl.utente.email">
-              <p ng-show="utenteForm.email.$invalid && !utenteForm.email.$pristine" class="help-block">Enter a valid email.</p>
-            </div>
-
-            <button type="submit" class="btn btn-primary" ng-disabled="utenteForm.$invalid">Submit</button>
-
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<product-list elenco-prodotti="ctrl.elenco"></product-list>

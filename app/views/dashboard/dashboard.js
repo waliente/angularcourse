@@ -2,14 +2,14 @@
 
 angular.module('app.dashboard', [])
 
-  .controller('dashboardCtrl', ['$scope', 'elencoCitta', function ($scope, elencoCitta) {
+  .controller('dashboardCtrl', ['$scope', 'elencoProdotti', function ($scope, elencoProdotti) {
 
     var vm = this;
 
     $scope.ciao = "Salve a tutti";
    
     vm.componentName = "Dashboard";
-    elencoCitta.getAll()
+    elencoProdotti.getAll()
     /*Successo (success)*/
       .success(function (data) {
         console.log(data);
@@ -22,9 +22,9 @@ angular.module('app.dashboard', [])
 
 
     /*Imposto la variabile elenco alla risposta del servizio*/
-    /*    vm.elenco = elencoCitta.elenco;*/
-    /*Creo un oggetto citta - da popolare con ng model */
-    vm.citta = {};
+    /*    vm.elenco = elencoProdotti.elenco;*/
+    /*Creo un oggetto prodotto - da popolare con ng model */
+    vm.prodotto = {};
     /*Creo un oggetto utente */
     vm.utente = {};
 
@@ -38,9 +38,10 @@ angular.module('app.dashboard', [])
       }
     }
 
-    //SVUOTA CITTA
-    vm.svuotaCitta = function () {
+    //SVUOTA PRODOTTO
+    vm.svuotaProdotto = function () {
       alert("ciao adesso svuoto");
+      vm.elenco = [];
     }
 
   }]);

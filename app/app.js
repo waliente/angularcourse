@@ -5,13 +5,13 @@ angular.module('myApp', [
   'ui.router',
   /*'ngRoute',*/
   /* services */
-  'cittaServices',
+  'prodottiServices',
   
   /* my components */
   'app.dashboard',
-  'app.cities',
-  'app.addCityComponent',
-  'app.cityListComponent',
+  'app.products',
+  'app.addProductComponent',
+  'app.productListComponent',
 
 ])
 
@@ -21,13 +21,13 @@ angular.module('myApp', [
         templateUrl: 'views/dashboard/dashboard.html',
         controller: 'dashboardCtrl as ctrl'
       })
-      .when("/cities", {
-        templateUrl: 'views/cities/cities.html',
-        controller: 'citiesCtrl as citiesCtrl'
+      .when("/product", {
+        templateUrl: 'views/product/product.html',
+        controller: 'prodCtrl as prodCtrl'
       })
-      .when("/cities/:cityName", {
-        templateUrl: 'views/cities/cities-detail.html',
-        controller: 'citiesCtrl as citiesCtrl'
+      .when("/product/:productName", {
+        templateUrl: 'views/product/product-detail.html',
+        controller: 'prodCtrl as prodCtrl'
       })
       .otherwise({
         redirectTo: '/dashboard'      
@@ -42,18 +42,18 @@ angular.module('myApp', [
         templateUrl: 'views/dashboard/dashboard.html',
         controller: 'dashboardCtrl as ctrl'
       })
-      .state('cities', {
-        url: '/cities',
-        templateUrl: 'views/cities/cities.html',
-        controller: 'citiesCtrl as citiesCtrl',
+      .state('product', {
+        url: '/product',
+        templateUrl: 'views/product/product.html',
+        controller: 'prodCtrl as prodCtrl',
         /*Parametri personalizzati es: 
           free: false
         */
       })
-      .state('cities-detail', {
-        url: '/cities-detail/:cityName',
-        templateUrl: 'views/cities/cities-detail.html',
-        controller: 'citiesCtrl as citiesCtrl'
+      .state('product-detail', {
+        url: '/product-detail/:productName',
+        templateUrl: 'views/product/product-detail.html',
+        controller: 'prodCtrl as prodCtrl'
       })
       ;
     $urlRouterProvider.otherwise('/dashboard');

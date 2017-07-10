@@ -1,0 +1,15 @@
+<ul class="list-unstyled" ng-repeat="prodotto in prodListCtrl.elencoProdotti track by $index" class="">
+  <li class="col-md-3">
+    <a ui-sref="product-detail({productName: prodotto.nome})">
+    <img src="{{prodotto.image}}.png" class="img-responsive" alt="{{prodotto.nome}}">
+    <h2> {{prodotto.nome}}</h2>
+    <h4> {{prodotto.prezzo}}</h4>
+    </a>
+  </li>
+</ul>
+
+<p>{{prodListCtrl.ciao}}</p>
+<!--<p>
+  {{prodListCtrl.elencoProdotti}}
+</p>
+-->
