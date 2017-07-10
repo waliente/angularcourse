@@ -4,7 +4,7 @@
     <ul class="list-unstyled row">
       <li class="col-md-3" ng-repeat="prodotto in prodListCtrl.elencoProdotti track by $index" >
         <a ui-sref="product-detail({productName: prodotto.nome})">
-          <img src="{{prodotto.image}}.png" class="img-responsive" alt="{{prodotto.nome}}">
+          <img src="{{prodotto.image}}" class="img-responsive" alt="{{prodotto.nome}}">
           <h2> {{prodotto.nome}}</h2>
           <h4> {{prodotto.prezzo}}</h4>
         </a>

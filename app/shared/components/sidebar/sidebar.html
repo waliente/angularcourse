@@ -1,0 +1,15 @@
+<div class="panel panel-default sidebar">
+    <div class="panel-heading">
+        <h4>Categorie</h4>
+    </div>
+    <div class="panel-body">
+        <ul class="list-unstyled">
+            <li ng-repeat="category in sidebarCtrl.categories">
+                <a href="{{category.nomeCat}}">
+                {{category.nomeCat}}
+                </a>
+                <small>{{category.desc}}</small>
+            </li>
+        </ul>
+    </div>
+</div>

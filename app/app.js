@@ -6,13 +6,14 @@ angular.module('myApp', [
   /*'ngRoute',*/
   /* services */
   'prodottiServices',
+  'catService',
   
   /* my components */
   'app.dashboard',
   'app.products',
   'app.addProductComponent',
   'app.productListComponent',
-
+  'app.sidebar'
 ])
 
 /*  .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
@@ -53,7 +54,7 @@ angular.module('myApp', [
       .state('product-detail', {
         url: '/product-detail/:productName',
         templateUrl: 'views/product/product-detail.html',
-        controller: 'prodCtrl as prodCtrl'
+        controller: 'prodDetailCtrl as prodDetailCtrl'
       })
       ;
     $urlRouterProvider.otherwise('/dashboard');

@@ -1,31 +1,31 @@
     [
         {
-            "image": "assets/img/placeholder",
+            "image": "assets/img/placeholder.png",
             "nome": "Laser",
             "prezzo": "3€"
         },
         {
-            "image": "assets/img/placeholder",
+            "image": "assets/img/placeholder.png",
             "nome": "Combat",
             "prezzo": "8€"
         },
         {
-            "image": "assets/img/placeholder",
+            "image": "assets/img/placeholder.png",
             "nome": "Optimus",
             "prezzo": "1€"
         },
         {
-            "image": "assets/img/placeholder",
+            "image": "assets/img/placeholder.png",
             "nome": "Prime",
             "prezzo": "4€"
         },
         {
-            "image": "assets/img/placeholder",
+            "image": "assets/img/placeholder.png",
             "nome": "Beta 5",
             "prezzo": "45€"
         },
         {
-            "image": "assets/img/placeholder",
+            "image": "assets/img/placeholder.png",
             "nome": "Angular",
             "prezzo": "12€"
         }

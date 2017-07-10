@@ -29,23 +29,39 @@
             <ol class="breadcrumb">
                 <!--<li>{{prodListCtrl.componentName}}</li>-->
                 <li>
-                    <button class="btn btn-default" ng-click="prodCtrl.goTo('dashboard')">Torna alla home</button>
+                    <button class="btn btn-default" ng-click="prodDetailCtrl.goTo('dashboard')">Torna alla home</button>
                 </li>
             </ol>
         </div>
     </div>
     <div class="clearfix">&nbsp;</div>
     <div class="row">
-        <div class="col-md-4">
-            <img src="{{prodCtrl.prodotto.image}}.png" class="img-responsive" alt="{{prodCtrl.prodotto.nome}}">
+        <div class="col-md-6">
+            <img src="{{prodDetailCtrl.singleProduct.mainImage}}" class="img-responsive" alt="{{prodDetailCtrl.singleProduct.nome}}">
+            <ul class="row list-unstyled">
+                <li class="col-md-4" ng-repeat="productImg in prodDetailCtrl.singleProduct.images">
+                    <p>
+                        <small>{{productImg.alt}}</small>
+                    </p>
+                    <img src="{{productImg.url}}" class="img-responsive" alt="{{productImg.alt}}">
+                </li>
+            </ul>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
             <h1>
-                {{prodCtrl.nomeProdotto}}
+                {{prodDetailCtrl.singleProduct.nome}}
             </h1>
             <h4>
-                {{prodCtrl.prodotto.prezzo}}
+                {{prodDetailCtrl.singleProduct.prezzo}}
             </h4>
+            <p>{{prodDetailCtrl.singleProduct.desc}}</p>
+
+
+            <select class="form-control" ng-model="prodDetailCtrl.selectedSize" ng-options="prodDetailCtrl.singleProduct.taglia.size as taglia.size for taglia in prodDetailCtrl.singleProduct.taglia">
+                {{taglia.size}} 
+            </select>
+
+
             <h2 ng-if="prodCtrl.nomeProdotto == 'Angular'">
                 Angular è in offerta a 2€
             </h2>

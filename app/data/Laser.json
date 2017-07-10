@@ -1,0 +1,31 @@
+{
+    "mainImage": "assets/img/placeholder.png",
+    "images": [
+        {
+            "url": "assets/img/placeholder.png",
+            "alt": "Laser 2"
+        },
+        {
+            "url": "assets/img/placeholder.png",
+            "alt": "Laser 3"
+        },
+        {
+            "url": "assets/img/placeholder.png",
+            "alt": "Laser 4"
+        }
+    ],
+    "nome": "Laser",
+    "prezzo": "3€",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit obcaecati nemo nulla quod magnam! Laboriosam, odio ratione. Sequi, nulla, necessitatibus! Ullam soluta porro et nihil quod repellat possimus, voluptatum nulla.",
+    "taglia": [
+        {
+            "size": "M - 46"
+        },
+        {
+            "size": "S - 31"
+        },
+        {
+            "size": "L - 123"
+        }
+    ]
+}

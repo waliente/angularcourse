@@ -17,7 +17,7 @@ angular.module('app.products', [])
         alert("Si è verificato un errore!");
       });
 
-    console.log($stateParams.productName);
+    console.log("Stai osservando il prodotto " + $stateParams.productName);
 
     vm.nomeProdotto = $stateParams.productName;
 
