@@ -30,7 +30,7 @@ angular.module("app.addProductComponent", [])
               alert("Si è verificato un errore!");
             });
         };
-
+        
         
 
       }

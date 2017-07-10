@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
@@ -21,43 +21,55 @@
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.container -->
 </nav>
-<ol class="breadcrumb">
-    <li>
-        <button class="btn btn-default" ng-click="prodCtrl.goTo('dashboard')">Torna alla home</button>
-    </li>
-</ol>
-<h1>Prodotti</h1>
-<div class="table table-responsive">
-    <table class="table">
-        <thead>
-            <th>
-                Foto
-            </th>
-            <th>
-                Nome
-            </th>
-            <th>
-                Regione
-            </th>
-        </thead>
-        <tbody>
-            <tr ng-repeat="prodotto in prodCtrl.elenco">
-                <td width="100">
-                    <!--<a href="product-detail/{{prodotto.nome}}">{{prodotto.nome}}</a>-->
-                    <a ui-sref="product-detail({productName: prodotto.nome})">
-                        <img src="{{prodotto.image}}.png" class="img-responsive" width="100" alt="{{prodotto.nome}}">
-                    </a>
-                </td>
-                <td>
-                    <!--<a href="product-detail/{{prodotto.nome}}">{{prodotto.nome}}</a>-->
-                    <a ui-sref="product-detail({productName: prodotto.nome})">{{prodotto.nome}}</a>
-                </td>
-                <td>
-                    {{prodotto.regione}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ol class="breadcrumb">
+                <li>
+                    <button class="btn btn-default" ng-click="prodCtrl.goTo('dashboard')">Torna alla home</button>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="clearfix"> &nbsp;</div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1>Prodotti</h1>
+            <div class="table table-responsive">
+                <table class="table">
+                    <thead>
+                        <th>
+                            Foto
+                        </th>
+                        <th>
+                            Nome
+                        </th>
+                        <th>
+                            Prezzo
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="prodotto in prodCtrl.elenco">
+                            <td width="100">
+                                <!--<a href="product-detail/{{prodotto.nome}}">{{prodotto.nome}}</a>-->
+                                <a ui-sref="product-detail({productName: prodotto.nome})">
+                                    <img src="{{prodotto.image}}.png" class="img-responsive" width="100" alt="{{prodotto.nome}}">
+                                </a>
+                            </td>
+                            <td>
+                                <!--<a href="product-detail/{{prodotto.nome}}">{{prodotto.nome}}</a>-->
+                                <a ui-sref="product-detail({productName: prodotto.nome})">{{prodotto.nome}}</a>
+                            </td>
+                            <td>
+                                {{prodotto.prezzo}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
