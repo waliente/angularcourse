@@ -2,7 +2,10 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js">
+<!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +15,13 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
 
+  <nav-menu></nav-menu>
+
   <ui-view></ui-view>
-<!--  <div ng-view>
+  <!--  <div ng-view>
     
   </div>-->
   <!-- In production use:
@@ -23,19 +29,21 @@
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<!--  <script src="bower_components/angular-route/angular-route.min.js"></script>-->
+  <!--  <script src="bower_components/angular-route/angular-route.min.js"></script>-->
   <!-- inject libraries -->
-  
+
   <!-- inject services -->
   <script src="shared/services/cardService.js"></script>
 
   <!-- inject components -->
   <script src="views/dashboard/dashboard.js"></script>
+  <script src="shared/components/navMenu/navMenu.js"></script>
   <script src="shared/components/cardList/cardList.js"></script>
   <script src="views/cards/cards.js"></script>
   <script src="views/cards/card-detail.js"></script>
-  
+
   <!-- inject app.js -->
   <script src="app.js"></script>
 </body>
+
 </html>

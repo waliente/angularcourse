@@ -1,13 +1,10 @@
 angular.module('cardService', [])
-
-    .service('elencoCarte', function ($http) {
-       return {
-           getAll: function(){
-               return $http.get("./data/elencoCarte.json")
-           },
-           saveAll: function(prodotto){
-               return $http.post("./data/elencoCarte.json", prodotto) 
-           }
-       }
-
+   
+    //ELENCO CARTE SERVICE
+    .service('elencoCarte', function ($http, baseUrl) {
+        return {
+            getAll: function () {
+                return $http.get(baseUrl.endpoint + "/cards")
+            }
+        }
     });

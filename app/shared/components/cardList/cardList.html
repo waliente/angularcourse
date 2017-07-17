@@ -1,19 +1,49 @@
 <div class="row">
   <div class="col-md-12">
-    <h2>Tutte le carte</h2>
-    <ul class="list-unstyled row">
-      <li class="col-md-3" ng-repeat="card in ctrl.elencoCarte track by $index" >
-        <a ui-sref="card-detail({cardName: card.nome})">
-          <img src="{{card.image}}" class="img-responsive" alt="{{card.nome}}">
-          <h2> {{card.nome}}</h2>
-          <h4> {{card.prezzo}}</h4>
-        </a>
-      </li>
-    </ul>
+    <div class="table table-responsive">
+      <table class="table">
+        <thead>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr ng-repeat="card in cardListCtrl.elencoCarte">
 
-    <!--<p>
-  {{ctrl.elencoCarte}}
-</p>
--->
+            <td>
+              <a ui-sref="card-detail({card.name})">
+                <img src="{{card.imagesrc}}" class="img-responsive" width="60" alt="card image">
+              </a>
+            </td>
+            <td>
+              <p><b>{{card.name}}</b></p> -
+              <p><i>{{card.label}}</i></p>
+            </td>
+            <td>
+              <p>{{card.points}}</p>
+            </td>
+            <td>
+              <p>
+                {{card.rarity_name}}
+              </p>
+            </td>
+            <td>
+              <div class="well">
+                <ul class="list-inline">
+                  <li>
+                    <p>{{card.sides[0]}} <span ng-class=""></span></p>
+                    <p>{{card.sides[1]}}</p>
+                    <p>{{card.sides[2]}}</p>
+                    <p>{{card.sides[3]}}</p>
+                    <p>{{card.sides[4]}}</p>
+                    <p>{{card.sides[5]}}</p>
+                  </li>
+                </ul>
+              </div>
+            </td>
+            <td> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </div>

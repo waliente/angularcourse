@@ -9,6 +9,7 @@ angular.module('myApp', [
   
   /* my components */
   'app.dashboard',
+  'app.navMenu',
   'app.cards',
   'app.cardListComponent'
   ])
@@ -42,8 +43,8 @@ angular.module('myApp', [
       })
       .state('cards', {
         url: '/cards',
-        templateUrl: 'views/cards/product.html',
-        controller: 'prodCtrl as prodCtrl',
+        templateUrl: 'views/cards/cards.html',
+        controller: 'cardCtrl as cardCtrl',
         /*Parametri personalizzati es: 
           free: false
         */
@@ -51,7 +52,7 @@ angular.module('myApp', [
       .state('card-detail', {
         url: '/card-detail/:cardName',
         templateUrl: 'views/card/card-detail.html',
-        controller: 'prodDetailCtrl as prodDetailCtrl'
+        controller: 'cardDetailCtrl as cardDetailCtrl'
       })
       ;
     $urlRouterProvider.otherwise('/dashboard');
@@ -59,4 +60,13 @@ angular.module('myApp', [
        enabled: true,
        requireBase: false
      });*/
-  }]);
+  }])
+
+
+   .factory('baseUrl', function () {
+        return {
+            endpoint: "https://swdestinydb.com/api/public"
+        }
+    })
+
+    ;
