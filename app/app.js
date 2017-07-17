@@ -51,7 +51,7 @@ angular.module('myApp', [
       })
       .state('card-detail', {
         url: '/card-detail/:cardName',
-        templateUrl: 'views/card/card-detail.html',
+        templateUrl: 'views/cards/card-detail.html',
         controller: 'cardDetailCtrl as cardDetailCtrl'
       })
       ;

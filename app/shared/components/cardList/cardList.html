@@ -9,7 +9,7 @@
           <tr ng-repeat="card in cardListCtrl.elencoCarte">
 
             <td>
-              <a ui-sref="card-detail({card.name})">
+              <a ui-sref="card-detail({cardName:card.name})">
                 <img src="{{card.imagesrc}}" class="img-responsive" width="60" alt="card image">
               </a>
             </td>
