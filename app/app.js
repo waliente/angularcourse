@@ -5,16 +5,13 @@ angular.module('myApp', [
   'ui.router',
   /*'ngRoute',*/
   /* services */
-  'prodottiServices',
-  'catService',
+  'cardService',
   
   /* my components */
   'app.dashboard',
-  'app.products',
-  'app.addProductComponent',
-  'app.productListComponent',
-  'app.sidebar'
-])
+  'app.cards',
+  'app.cardListComponent'
+  ])
 
 /*  .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $routeProvider
@@ -43,17 +40,17 @@ angular.module('myApp', [
         templateUrl: 'views/dashboard/dashboard.html',
         controller: 'dashboardCtrl as ctrl'
       })
-      .state('product', {
-        url: '/product',
-        templateUrl: 'views/product/product.html',
+      .state('cards', {
+        url: '/cards',
+        templateUrl: 'views/cards/product.html',
         controller: 'prodCtrl as prodCtrl',
         /*Parametri personalizzati es: 
           free: false
         */
       })
-      .state('product-detail', {
-        url: '/product-detail/:productName',
-        templateUrl: 'views/product/product-detail.html',
+      .state('card-detail', {
+        url: '/card-detail/:cardName',
+        templateUrl: 'views/card/card-detail.html',
         controller: 'prodDetailCtrl as prodDetailCtrl'
       })
       ;

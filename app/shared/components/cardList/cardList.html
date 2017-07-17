@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Tutte le carte</h2>
+    <ul class="list-unstyled row">
+      <li class="col-md-3" ng-repeat="card in ctrl.elencoCarte track by $index" >
+        <a ui-sref="card-detail({cardName: card.nome})">
+          <img src="{{card.image}}" class="img-responsive" alt="{{card.nome}}">
+          <h2> {{card.nome}}</h2>
+          <h4> {{card.prezzo}}</h4>
+        </a>
+      </li>
+    </ul>
+
+    <!--<p>
+  {{ctrl.elencoCarte}}
+</p>
+-->
+  </div>
+</div>

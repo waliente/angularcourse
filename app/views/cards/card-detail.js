@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('app.products')
+angular.module('app.cards')
 
-  .controller('prodDetailCtrl', ['$scope', '$http', '$stateParams', '$state', 'elencoProdotti', function ($scope, $http, $stateParams, $state, elencoProdotti) {
+  .controller('cardDetailCtrl', ['$scope', '$http', '$stateParams', '$state', 'elencoCarte', function ($scope, $http, $stateParams, $state, elencoCarte) {
 
     var vm = this; 
 

@@ -2,14 +2,12 @@
 
 angular.module('app.dashboard', [])
 
-  .controller('dashboardCtrl', ['$scope', 'elencoProdotti', function ($scope, elencoProdotti) {
+  .controller('dashboardCtrl', ['$scope', 'elencoCarte', function ($scope, elencoCarte) {
 
     var vm = this;
 
-    $scope.ciao = "Salve a tutti";
-   
     vm.componentName = "Dashboard";
-    elencoProdotti.getAll()
+    elencoCarte.getAll()
     /*Successo (success)*/
       .success(function (data) {
         console.log(data);
@@ -22,7 +20,7 @@ angular.module('app.dashboard', [])
 
 
     /*Imposto la variabile elenco alla risposta del servizio*/
-    /*    vm.elenco = elencoProdotti.elenco;*/
+    /*    vm.elenco = elencoCarte.elenco;*/
     /*Creo un oggetto prodotto - da popolare con ng model */
     vm.prodotto = {};
     /*Creo un oggetto utente */

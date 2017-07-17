@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('app.products', [])
+angular.module('app.cards', [])
 
-  .controller('prodCtrl', ['$scope','$stateParams', '$state', 'elencoProdotti', function ($scope, $stateParams, $state, elencoProdotti) {
+  .controller('prodCtrl', ['$scope','$stateParams', '$state', 'elencoCarte', function ($scope, $stateParams, $state, elencoCarte) {
 
     var vm = this; 
 
-    elencoProdotti.getAll()
+    elencoCarte.getAll()
     /*Successo (success)*/
       .success(function (data) {
         console.log(data);
