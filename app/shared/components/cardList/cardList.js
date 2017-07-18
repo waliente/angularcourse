@@ -21,6 +21,7 @@ angular.module("app.cardListComponent", [])
             disrupt: 'Dr',
             resource: 'R',
             special: 'Sp',
+            shield: 'Sh',
             blank: '-'
         };
 
@@ -33,20 +34,28 @@ angular.module("app.cardListComponent", [])
                 console.log(res);
 
                 $scope.filtraSides = function (data) {
+                    if (data) {
 
-                    angular.forEach(diceIcons, function (value, key) {
-                        // console.log(data, value, key);
-                        if(data.includes(value)){
-                            var newData;
-                            var icon = document.createElement('span');
-                            icon.classList.add(`icon`, `icon-${key}`);
+                        var newData = data.map(function(el, index) {
 
-                            newData = data.replace(value, icon);
-                            console.log(newData);
-                        }
-                        
+                            var output = el;
+                            var hasIcon = 0;
+
+                            angular.forEach(diceIcons, function (value, key) {
+
+                                if (hasIcon === 0 && el.includes(value)) {
+                                    hasIcon = 1;
+                                    var icon = `<span class="icon icon-${key}"></span>`;
+                                    output = el.replace(value, icon);
+                                    return output;
+                                }
+                            });
+
+                            return output
+                        });
+
                         return newData;
-                    });
+                    }
                 };
 
                 vm.elencoCarte = res.data;

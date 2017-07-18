@@ -28,8 +28,8 @@
             <td>
               <div class="well">
                 <ul class="list-inline">
-                  <li ng-repeat="side in card.sides track by $index">
-                    <p ng-if="filtraSides(side) = ">{{side}}</p>
+                  <li ng-repeat="side in filtraSides(card.sides) track by $index">
+                    <p>{{side}}</p>
                   </li>
                 </ul>
               </div>
