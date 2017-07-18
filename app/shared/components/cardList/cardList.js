@@ -28,6 +28,7 @@ angular.module("app.cardListComponent", [])
     /*Successo (success)*/
       .then(function (res) {
         console.log(res);
+        vm.elencoCarte = res.data;
 
         $scope.filtraSides = function (data) {
           if (data) {
@@ -41,8 +42,9 @@ angular.module("app.cardListComponent", [])
 
                 if (hasIcon === 0 && el.includes(value)) {
                   hasIcon = 1;
-                  var icon = `<span class="icon icon-${key}"></span>`;
-                  output = el.replace(value, icon);
+                  output = el.replace(value, key);
+                  console.log(output); // un errore è qui in quanto stampi con tutto il numero. Dovresti rimuovere il primo carattere. Ma poi devi fare attenzione perchè a volte il primo carattere della
+                  // stringa è un + e non il numero. Ti lascio il log cosi vedi.
                   return output;
                 }
               });
@@ -54,7 +56,7 @@ angular.module("app.cardListComponent", [])
           }
         };
 
-        vm.elencoCarte = res.data;
+
       })
       /*Errore (error)*/
       .catch(function () {
