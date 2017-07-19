@@ -29,13 +29,7 @@
               <div class="well">
                 <ul class="list-inline">
                   <li ng-repeat="side in filtraSides(card.sides) track by $index">
-                    <!-- qui ho intercettato con lo switch ma è cmq sbagliato perche se vedi intercetto se è: "1ranged", dovrei intercettare se è ranged.
-                    Quindi si dovrebbe migliroare l'intercettazione lato JS, cmq è nu casin, va pensata con calma per trovare il modo in cui ha fatto lui -->
-                    <div ng-switch="side">
-                      <span ng-switch-when="1ranged">
-                        <img src="assets/img/ranged.jpg" width="15" class="img-responsive" alt="">
-                      </span>
-                    </div>
+                    <span ng-bind-html="iconSnippet(side)"></span>
                   </li>
                 </ul>
               </div>

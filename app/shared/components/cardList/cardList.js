@@ -1,4 +1,4 @@
-angular.module("app.cardListComponent", [])
+angular.module("app.cardListComponent", ['ngSanitize'])
   .component("cardList", {
     restrict: "E",
     templateUrl: "./shared/components/cardList/cardList.html",
@@ -8,7 +8,7 @@ angular.module("app.cardListComponent", [])
   })
 
 
-  .controller('cardListCtrl', ['$scope', 'elencoCarte', function ($scope, elencoCarte) {
+  .controller('cardListCtrl', ['$scope', '$sce', 'elencoCarte', function ($scope, $sce, elencoCarte) {
     var vm = this;
 
     var diceIcons = {
@@ -23,40 +23,41 @@ angular.module("app.cardListComponent", [])
       blank: '-'
     };
 
+    $scope.iconSnippet = function(el) {
+      return $sce.trustAsHtml(el);
+    };
+
+    $scope.filtraSides = function (data) {
+      if (data) {
+        // console.log(data);return;
+        var newData = data.map(function (el, index) {
+
+          var output = el;
+          var hasIcon = 0;
+
+          angular.forEach(diceIcons, function (value, key) {
+
+            if (hasIcon === 0 && el.includes(value)) {
+              hasIcon = 1;
+              var icon = `<span class="icon icon-${key}"></span>`;
+              output = el.replace(value, icon);
+              //console.log(output);
+              return output;
+            }
+          });
+
+          return output;
+        });
+
+        return newData;
+      }
+    };
 
     elencoCarte.getAll()
-    /*Successo (success)*/
+      // on success
       .then(function (res) {
-        console.log(res);
+        // console.log(res);
         vm.elencoCarte = res.data;
-
-        $scope.filtraSides = function (data) {
-          if (data) {
-
-            var newData = data.map(function (el, index) {
-
-              var output = el;
-              var hasIcon = 0;
-
-              angular.forEach(diceIcons, function (value, key) {
-
-                if (hasIcon === 0 && el.includes(value)) {
-                  hasIcon = 1;
-                  output = el.replace(value, key);
-                  console.log(output); // un errore è qui in quanto stampi con tutto il numero. Dovresti rimuovere il primo carattere. Ma poi devi fare attenzione perchè a volte il primo carattere della
-                  // stringa è un + e non il numero. Ti lascio il log cosi vedi.
-                  return output;
-                }
-              });
-
-              return output
-            });
-
-            return newData;
-          }
-        };
-
-
       })
       /*Errore (error)*/
       .catch(function () {
