@@ -68,5 +68,8 @@ angular.module('myApp', [
             endpoint: "https://swdestinydb.com/api/public"
         }
     })
+    .factory("getDIces", function(){
+      
+    })
 
     ;

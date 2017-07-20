@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-default">
-                <div class="panel-heading" ng-class="">
+                <div class="panel-heading" ng-class="{ 'legendary' : cardDetailCtrl.card.rarity_code === 'L', 'common' : cardDetailCtrl.card.rarity_code === 'C', 'uncommon' : cardDetailCtrl.card.rarity_code === 'U', 'starter' : cardDetailCtrl.card.rarity_code === 'S', 'rare' : cardDetailCtrl.card.rarity_code === 'R' }">
                     <h2>{{cardDetailCtrl.card.name}}</h2>
                     <p>{{cardDetailCtrl.card.subtitle}}</p>
                 </div>
@@ -30,6 +30,8 @@
 <span ng-if="cardDetailCtrl.card.rarity_code === 'L' " style="color: purple;">{{cardDetailCtrl.card.rarity_name}}</span>
 <span ng-if="cardDetailCtrl.card.rarity_code === 'U' " style="color: yellow;">{{cardDetailCtrl.card.rarity_name}}</span>
 <span ng-if="cardDetailCtrl.card.rarity_code === 'S' " style="color: grey;">{{cardDetailCtrl.card.rarity_name}}</span>
+
+    
 
 </div>
 </div>
