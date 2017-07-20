@@ -50,7 +50,7 @@ angular.module('myApp', [
         */
       })
       .state('card-detail', {
-        url: '/card-detail/:cardName',
+        url: '/card-detail/:idCard',
         templateUrl: 'views/cards/card-detail.html',
         controller: 'cardDetailCtrl as cardDetailCtrl'
       })

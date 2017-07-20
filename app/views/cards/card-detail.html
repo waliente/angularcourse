@@ -1,28 +1,3 @@
-<nav class="navbar navbar-default">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-            <a class="navbar-brand" href="#">AngularCourse</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a ui-sref="dashboard" ui-sref-active="active">Dashboard</a></li>
-                <li><a ui-sref="product" ui-sref-active="active">Prodotti</a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
@@ -36,35 +11,30 @@
     </div>
     <div class="clearfix">&nbsp;</div>
     <div class="row">
-        <div class="col-md-6">
-            <img src="{{prodDetailCtrl.singleProduct.mainImage}}" class="img-responsive" alt="{{prodDetailCtrl.singleProduct.nome}}">
-            <ul class="row list-unstyled">
-                <li class="col-md-4" ng-repeat="productImg in prodDetailCtrl.singleProduct.images">
-                    <p>
-                        <small>{{productImg.alt}}</small>
-                    </p>
-                    <img src="{{productImg.url}}" class="img-responsive" alt="{{productImg.alt}}">
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <h1>
-                {{prodDetailCtrl.singleProduct.nome}}
-            </h1>
-            <h4>
-                {{prodDetailCtrl.singleProduct.prezzo}}
-            </h4>
-            <p>{{prodDetailCtrl.singleProduct.desc}}</p>
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading" ng-class="">
+                    <h2>{{cardDetailCtrl.card.name}}</h2>
+                    <p>{{cardDetailCtrl.card.subtitle}}</p>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img src="{{cardDetailCtrl.card.imagesrc}}" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h2></h2>
+                            <p>{{cardDetailCtrl.card.text}}</p>
+                            <span ng-if="cardDetailCtrl.card.rarity_code === 'C' " style="color: blue;">{{cardDetailCtrl.card.rarity_name}}</span>
+<span ng-if="cardDetailCtrl.card.rarity_code === 'R' " style="color: green;">{{cardDetailCtrl.card.rarity_name}}</span>
+<span ng-if="cardDetailCtrl.card.rarity_code === 'L' " style="color: purple;">{{cardDetailCtrl.card.rarity_name}}</span>
+<span ng-if="cardDetailCtrl.card.rarity_code === 'U' " style="color: yellow;">{{cardDetailCtrl.card.rarity_name}}</span>
+<span ng-if="cardDetailCtrl.card.rarity_code === 'S' " style="color: grey;">{{cardDetailCtrl.card.rarity_name}}</span>
 
-
-            <select class="form-control" ng-model="prodDetailCtrl.selectedSize" ng-options="prodDetailCtrl.singleProduct.taglia.size as taglia.size for taglia in prodDetailCtrl.singleProduct.taglia">
-                {{taglia.size}} 
-            </select>
-
-
-            <h2 ng-if="prodCtrl.nomeProdotto == 'Angular'">
-                Angular è in offerta a 2€
-            </h2>
-        </div>
-    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>

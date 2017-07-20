@@ -9,8 +9,9 @@
           <tr ng-repeat="card in cardListCtrl.elencoCarte">
 
             <td>
-              <a ui-sref="card-detail({cardName:card.name})">
-                <img src="{{card.imagesrc}}" class="img-responsive" width="60" alt="card image">
+              <a ui-sref="card-detail({idCard:card.code})">
+                <img src="{{card.imagesrc}}" class="img-responsive" width="60" alt="card image" ng-if="card.imagesrc != null">
+                <img src="assets/img/placeholder.png" alt="card placeholder" class="img-responsive" width="60" ng-if="card.imagesrc === null">
               </a>
             </td>
             <td>
@@ -21,24 +22,27 @@
               <p>{{card.points}}</p>
             </td>
             <td>
-              <p>
-                {{card.rarity_name}}
-              </p>
-            </td>
-            <td>
-              <div class="well">
-                <ul class="list-inline">
-                  <li ng-repeat="side in filtraSides(card.sides) track by $index">
-                    <span ng-bind-html="iconSnippet(side)"></span>
-                  </li>
-                </ul>
-              </div>
-            </td>
-            <td> </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+              <span ng-if="card.rarity_code === 'C' " style="color: blue;">{{card.rarity_name}}</span>
+<span ng-if="card.rarity_code === 'R' " style="color: green;">{{card.rarity_name}}</span>
+<span ng-if="card.rarity_code === 'L' " style="color: purple;">{{card.rarity_name}}</span>
+<span ng-if="card.rarity_code === 'U' " style="color: yellow;">{{card.rarity_name}}</span>
+<span ng-if="card.rarity_code === 'S' " style="color: grey;">{{card.rarity_name}}</span>
 
+</td>
+<td>
+  <div class="well">
+    <ul class="list-inline">
+      <li ng-repeat="side in filtraSides(card.sides) track by $index">
+        <span ng-bind-html="iconSnippet(side)"></span>
+      </li>
+    </ul>
   </div>
+</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
 </div>
