@@ -7,7 +7,7 @@ angular.module('cardService', [])
                 return $http.get(baseUrl.endpoint + "/cards")
             },
             getDetail: function (id) {
-                console.log("card service" + id)                
+                console.log("card service " + id)                
                 return $http.get(baseUrl.endpoint + "/card/" + id)
             }
         }

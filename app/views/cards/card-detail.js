@@ -6,13 +6,13 @@ angular.module('app.cards')
 
     var vm = this;
 
-    console.log($stateParams.idCard);
+    console.log("card detail" + $stateParams.idCard);
 
     elencoCarte.getDetail($stateParams.idCard)
         .then(function (res) {
           /*console.log("card detail" + res.data);*/
           vm.card = res.data;
-          console.log("card detail" + vm.card);
+          console.log("card detail ", vm.card.code);
           
         })
         .catch(function () {
